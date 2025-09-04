@@ -1,13 +1,16 @@
-import Image from "next/image";
-import { FC } from "react";
+import Link from "next/link";
 
 export default async function Home() {
   const data: Array<{ id: number; title: string; body: string }> = await (
     await fetch("https://jsonplaceholder.typicode.com/posts")
   ).json();
+
+
   return (
-    <div>
-      <h1>Hello Next</h1>
+    <section>
+      <h1>{Home.name}</h1>
+
+      <Link href="/about">About</Link>
 
       {data.map((post) => (
         <div
@@ -18,6 +21,6 @@ export default async function Home() {
           <p className="text-lg">{post.body}</p>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
