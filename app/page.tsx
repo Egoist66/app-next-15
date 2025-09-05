@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default async function Home() {
+export default async function HomePage() {
   const data: Array<{ id: number; title: string; body: string }> = await (
     await fetch("https://jsonplaceholder.typicode.com/posts")
   ).json();
@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <section>
-      <h1>{Home.name}</h1>
+      <h1>{HomePage.name}</h1>
 
       <Link href="/about">About</Link>
 

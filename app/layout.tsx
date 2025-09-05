@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
-import "../src/assets/css/globals.css";
-import { geistSans, geistMono } from "@/fonts/fonts";
+import "@/src/assets/css/globals.css";
+import { geistSans, geistMono } from "@/src/fonts/fonts"
 import { ReactNode, Suspense } from "react";
 import Loading from "./loading";
 

@@ -1,16 +1,15 @@
-import { Metadata } from "next"
-import Link from "next/link"
-
+import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: About.name
-}
-export default function About() {
+  title: AboutPage.name,
+};
+export default function AboutPage() {
   return (
     <section>
-        <h1 className="bg-blue-500">{About.name}</h1>
+      <h1 className="bg-blue-500">{AboutPage.name}</h1>
 
-        <Link href="/">Home</Link>
+      <Link href="/">Home</Link>
     </section>
-  )
+  );
 }
